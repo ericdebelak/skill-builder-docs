@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Skill Flow Builder Help</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="assets/fontawesome/js/all.js"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">  
+      
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+</head> 
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Skill Flow Builder Tips</h1>
+                </div><!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="download-section" class="doc-section">
+                                <h2 class="section-title">Download Skill Flow Builder Editor</h2>
+                                <div class="section-block">
+                                    <p>The Skill Flow Builder Editor makes it easy to build and test games.</p>
+                                    <p>
+                                        <a href="https://developer.amazon.com/en-IN/docs/alexa/custom-skills/use-the-skill-flow-builder-editor.html" class="btn btn-green" target="_blank"><i class="fas fa-download"></i> Download Skill Flow Builder Editor</a>
+                                    </p>
+                                    <p>View the Amazon docs on using the Skill Flow Builder Editor:</p>
+                                    <ul>
+                                        <li><a href="https://developer.amazon.com/en-IN/docs/alexa/custom-skills/use-skill-flow-builder-to-create-your-content.html" target="_blank">Use Skill Flow Builder to Create Your Content</a></li>
+                                    </ul>
+                                </div>
+                            </section><!--//doc-section-->
+                            <section id="sample-section" class="doc-section">
+                                <h2 class="section-title">View Sample Games</h2>
+                                <div class="section-block">
+                                    <p>When you start a new project in the Skill Flow Builder, you can use templates to see some sample games.</p>
+                                    <p>
+                                        <img class="img-fluid" src="assets/images/template-view.png" alt="Template view" />
+                                    </p>
+                                    <p>You can try these different games to get a sense of how the decision tree and sound effects works.</p>
+                                    <p>Amazon has blog posts about building games as well:</p>
+                                    <ul>
+                                        <li><a href="https://developer.amazon.com/en-US/blogs/alexa/alexa-skills-kit/2019/07/skill-flow-builder" target="_blank">Create Story-Based Game Skills Faster with Skill Flow Builder</a></li>
+                                    </ul>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="audio-section" class="doc-section">
+                                <h2 class="section-title">Audio</h2>
+                                <div id="add-sounds" class="section-block">
+                                    <h3>Add Sounds and Music</h3>
+                                    <p>Drag and drop sounds and music in the Skill Flow Builder.</p>
+                                    <p>
+                                        <img class="img-fluid" src="assets/images/audio-view.png" alt="Audio view" />
+                                    </p>
+                                    <div class="callout-block callout-danger">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-exclamation-triangle"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">File names</h4>
+                                            <p>File names cannot have spaces in them.</p>
+                                        </div><!--//content-->
+                                    </div><!--//callout-block-->
+                                </div><!--//section-block-->
+                                <div id="use-sounds" class="section-block">
+                                    <h3>Using Sounds and Music</h3>
+                                    <p>Once your sounds are there, you can drag and drop them into the appropriate place in either:</p>
+                                    <p>The Source View:</p>
+                                    <p>
+                                        <code>
+                                            You keep falling. [sfx trumpet_1.mp3]
+                                        </code>
+                                    </p>
+                                    <p>The Guided View:</p>
+                                    <p>
+                                        <img class="img-fluid" src="assets/images/guided-audio-view.png" alt="Guided audio view" />
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="background-music" class="section-block">
+                                    <h3>Background Music</h3>
+                                    <p>You can also use background music in the Source View. The music needs to be in the then block like the example below.</p>
+                                    <p>
+                                        <code>
+                                            *then<br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;bgm [sfx file_name.mp3]
+                                        </code>
+                                    </p>
+                                    <p>Or</p>
+                                    <p>
+                                        <code>
+                                            *then<br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;bgm https://url-to-the-background-music.mp3
+                                        </code>
+                                    </p>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                            <section id="Voice-section" class="doc-section">
+                                <h2 class="section-title">Voices</h2>
+                                <div id="using-voices" class="section-block">
+                                    <h3>Using Voices</h3>
+                                    <p>You can set a default voice for your skill, set different text to use different voices.</p>
+                                    <p>The Source View:</p>
+                                    <p>
+                                        <code>
+                                            &#x3C;voice name=&#x27;Justin&#x27;&#x3E;Ouch.&#x3C;/voice&#x3E;
+                                        </code>
+                                    </p>
+                                    <p>The Guided View:</p>
+                                    <p>
+                                        <img class="img-fluid" src="assets/images/guided-voice-view.png" alt="Guided voice view" />
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="speech-styles" class="section-block">
+                                    <h3>Speech Styles</h3>
+                                    <p>You can also apply speech styles to your voices, called domains.</p>
+                                    <p>
+                                        View the <a href="https://developer.amazon.com/en-IN/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#amazon-domain" target="_blank">Domain Documentation</a>
+                                    </p>
+                                    <p>The Source View:</p>
+                                    <p>
+                                        <code>
+                                            &#x3C;amazon:domain name=&#x22;conversational&#x22;&#x3E;<br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;That was great work today.<br/>
+                                            &#x3C;/amazon:domain&#x3E;<br/>
+                                        </code>
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="speech-effects" class="section-block">
+                                    <h3>Speech Effects</h3>
+                                    <p>You can also apply speech effects to your voices.</p>
+                                    <p>
+                                        View the <a href="https://developer.amazon.com/en-IN/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#amazon-effect" target="_blank">Effect Documentation</a>
+                                    </p>
+                                    <p>The Source View:</p>
+                                    <p>
+                                        <code>
+                                            &#x3C;amazon:effect name=&#x22;whispered&#x22;&#x3E;<br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;I've got a secret.<br/>
+                                            &#x3C;/amazon:domain&#x3E;<br/>
+                                        </code>
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="speech-emotions" class="section-block">
+                                    <h3>Speech Emotions</h3>
+                                    <p>You can also apply speech emotions to your voices.</p>
+                                    <p>There is both emotion and intensity settings.</p>
+                                    <p>
+                                        View the <a href="https://developer.amazon.com/en-IN/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#amazon-emotion" target="_blank">Emotion Documentation</a>
+                                    </p>
+                                    <p>The Source View:</p>
+                                    <p>
+                                        <code>
+                                            &#x3C;amazon:emotion name=&#x22;excited&#x22; intensity=&#x22;medium&#x22;&#x3E;<br/>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;You've got mail!<br/>
+                                            &#x3C;/amazon:domain&#x3E;<br/>
+                                        </code>
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="speech-emphasis" class="section-block">
+                                    <h3>Speech Emphasis</h3>
+                                    <p>You can also apply emphasis to your voices.</p>
+                                    <p>
+                                        View the <a href="https://developer.amazon.com/en-IN/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html#emphasis" target="_blank">Emphasis Documentation</a>
+                                    </p>
+                                    <p>The Source View:</p>
+                                    <p>
+                                        <code>
+                                            I &#x3C;emphasis level=&#x22;moderate&#x22;&#x3E;really&#x3C;/emphasis&#x3E; don't like computers.
+                                        </code>
+                                    </p>
+                                </div><!--//section-block-->
+                                <div id="speech-more" class="section-block">
+                                    <h3>More</h3>
+                                    <p>
+                                        More options can be found here <a href="https://developer.amazon.com/en-IN/docs/alexa/custom-skills/speech-synthesis-markup-language-ssml-reference.html" target="_blank">here</a>.
+                                    </p>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+	                        
+	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+	                                <a class="nav-link scrollto" href="#download-section">Download</a>
+	                                <a class="nav-link scrollto" href="#sample-section">View Sample Games</a>
+	                                <a class="nav-link scrollto" href="#audio-section">Audio</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#add-sounds">Add Sounds</a>
+                                        <a class="nav-link scrollto" href="#use-sounds">Use Sounds</a>
+                                        <a class="nav-link scrollto" href="#voices">Voices</a>
+                                        <a class="nav-link scrollto" href="#background-music">Background Music</a>
+                                    </nav><!--//nav-->
+                                    <a class="nav-link scrollto" href="#Voice-section">Voices</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#using-voices">Using Voices</a>
+                                        <a class="nav-link scrollto" href="#speech-styles">Speech Styles</a>
+                                        <a class="nav-link scrollto" href="#speech-effects">Speech Effects</a>
+                                        <a class="nav-link scrollto" href="#speech-emotions">Speech Emotions</a>
+                                        <a class="nav-link scrollto" href="#speech-emphasis">Speech Emphasis</a>
+                                        <a class="nav-link scrollto" href="#speech-more">More</a>
+                                    </nav><!--//nav-->
+	                            </nav><!--//doc-menu-->
+	                        
+                        </div>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->              
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+        
+    </div><!--//page-wrapper-->
+    
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
+            <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com/" target="_blank">Xiaoying Riley</a> for developers</small>
+            
+        </div><!--//container-->
+    </footer><!--//footer-->
+    
+     
+    <!-- Main Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>      
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>                                                             
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+</body>
+</html> 
+
